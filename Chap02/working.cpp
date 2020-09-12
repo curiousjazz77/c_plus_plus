@@ -35,8 +35,16 @@ int main()
     int c = 7;
     int *cp = &c;
     int &d = c; // d in this case is a reference
-    printf("*cp is %d\n", *cp);
+
+    c = 5; // reference will change
+
+    int z = 73;
+    cp = &z;
+    printf("*cp is %d\n", *cp); //now points to z
     printf("c is %d\n", c);
-    printf("d is %d\n", d);
+    printf("d is %d\n", d); //still equal to c
+    printf("z is %d\n", z);
+
+    
     return 0;
 }
