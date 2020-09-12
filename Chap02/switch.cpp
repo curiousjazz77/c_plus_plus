@@ -19,7 +19,7 @@ int main() {
             break;
         case iTHREE:
             puts("three");
-            break;
+            break; // if removed, falls through break and prints 3 and 4
         case iFOUR:
             puts("four");
             break;
@@ -27,4 +27,5 @@ int main() {
             puts("default");
             break;
     }
+    puts("After the switch");
 }
