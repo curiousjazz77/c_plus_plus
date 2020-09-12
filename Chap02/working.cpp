@@ -66,8 +66,17 @@ int main()
     char t[] = {'S', 't', 'r', 'i', 'n', 'g', 0}; //without the 0, it prints twice
     printf("String t is: %s\n", t);
 
-    for (int i = 0; s[i] != 0; ++i){
-        printf("char is %c\n", s[i]);
+    for (int i = 0; t[i] != 0; ++i){
+        printf("char is %c\n", t[i]);
+    }
+
+    for (char * cp = t; *cp != 0; ++cp){
+        printf("char is %c\n", *cp);
+    }
+
+    for(char c : t){
+        if (c==0) break;
+        printf("char is %c\n", c);
     }
     return 0;
 }
