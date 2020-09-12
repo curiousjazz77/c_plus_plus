@@ -78,5 +78,24 @@ int main()
         if (c==0) break;
         printf("char is %c\n", c);
     }
+
+    int f = 42;
+    int g = 712;
+
+    if (g > f) {
+        puts("True g is more than f");
+    } else if (g > 120){
+        puts("g is more than 120");
+    } else {
+        puts("Condition is false");
+    }
+
+    if (1){
+        puts("condition is True");
+    } else {
+        puts("Condition is False");
+    }
+
+    printf("The greater value is %d\n", g > f ? g : f);
     return 0;
 }
