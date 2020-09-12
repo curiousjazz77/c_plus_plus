@@ -45,6 +45,29 @@ int main()
     printf("d is %d\n", d); //still equal to c
     printf("z is %d\n", z);
 
-    
+
+    // primitive array
+    int ia[5];
+    ia[0] = 1;
+    *ia = 1;
+    int *ep = ia; //integer pointer
+
+    *ep = 2;
+    ++ep;
+    *ep = 3; //assigned to second element
+    *(++ep) = 4; //shortcut to the previous 2 commands
+
+    int ib[5] = { 1, 2, 3, 4, 5};
+
+    //primitive string is a special case of array 
+    char s[] = "String";
+    printf("String s is: %s\n", s);
+
+    char t[] = {'S', 't', 'r', 'i', 'n', 'g', 0}; //without the 0, it prints twice
+    printf("String t is: %s\n", t);
+
+    for (int i = 0; s[i] != 0; ++i){
+        printf("char is %c\n", s[i]);
+    }
     return 0;
 }
